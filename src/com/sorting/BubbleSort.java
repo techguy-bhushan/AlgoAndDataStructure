@@ -1,4 +1,7 @@
-package com.shorting;
+package com.sorting;
+
+import com.sorting.util.Util;
+
 /*
 *
 * ==============================Details====================================
@@ -9,9 +12,9 @@ package com.shorting;
 * 3. Repeat for the remaining array items
 * Perform subsequent passes until no swap are performed
 * ============================Performance=======================================
-* Worst case performance: O(n2)
+* Worst case performance: O(n^2)
 * ->Not appropriate for large unsorted data set
-* Average case performance : O(n2)
+* Average case performance : O(n^2)
 * ->Not appropriate for large unsorted data set
 * Best case performance: O(n)
 * ->Very googd best case performance and can efficiently sort smalland nearly sorted data set
@@ -32,19 +35,11 @@ public class BubbleSort {
                 }
     }
 
-    /* Prints the array */
-    static void printArray(int arr[])
-    {
-        int n = arr.length;
-        for (int i=0; i<n; ++i)
-            System.out.print(arr[i] + " ");
-        System.out.println();
-    }
 
     public static void main(String[] args) {
 
         int[]  testData = {7,4,3,8,9,5};
         bubbleSort(testData);
-        printArray(testData);
+        Util.printArray(testData);
     }
 }
